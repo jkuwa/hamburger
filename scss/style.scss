@@ -12,6 +12,12 @@
 @use "layout/header";
 
 
+//component
+
+@use "object/component/component";
+
+
 //project
 
-@use "object/project/p-header"
+@use "object/project/p-header";
+

@@ -1,0 +1,43 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variables" as var;
+
+.c-searchBox {
+  position: relative;
+  &::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: url(../../../images/header_searchBox.svg);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  input {
+    margin-right: 16px;
+    width: calc(100% - 9rem - 16px);
+    height: 46px;
+    border: 1px solid var.$gray-color;
+    border-radius: 10px 8px 10px 10px;
+    background: var.$white-color;
+    
+    @include mixin.breakpoint(tablet) {
+      margin-right: 14px;
+      width: calc(100% - 13.6rem - 14px);
+    }
+  }
+  button {
+    padding: 0 28px;
+    border: 1px solid var.$gray-color;
+    border-radius: 10px;
+    background: linear-gradient( to left bottom, var.$menuBtn-1, var.$menuBtn-2);
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: inherit;
+    line-height: 4.4rem;
+
+    @include mixin.breakpoint(tablet) {
+      padding: 0 51px;
+    }
+  }
+}

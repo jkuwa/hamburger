@@ -1,14 +1,23 @@
+@use "../foundation/mixin";
 @use "../foundation/variables" as var;
 
 .l-header {
   padding: 43px 0 39px;
+  width: 100%;
   background: var.$beige-color;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var.$gray-color;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+
+  @include mixin.breakpoint(tablet) {
+    padding-bottom: 40px;
+  }
+
+  @include mixin.breakpoint(pc) {
+    padding: 66px 31px 67px 4%;
+    // width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
