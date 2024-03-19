@@ -16,7 +16,7 @@
 
   @include mixin.breakpoint(pc) {
     padding: 66px 31px 67px 4%;
-    // width: 80%;
+    width: 80%;
     flex-direction: row;
     justify-content: space-between;
   }

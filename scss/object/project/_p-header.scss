@@ -11,8 +11,7 @@
       line-height: 1.17;
 
       @include mixin.breakpoint(pc) {
-        margin-right: 48px;
-        font-size: 6.4rem;
+        font-size: clamp(4rem, 3.3vw, 6.4rem);
       }
     }
     &__search {
