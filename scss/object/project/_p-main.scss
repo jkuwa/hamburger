@@ -1,0 +1,99 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variables" as var;
+
+.p-main {
+  background-color: var.$bg-color;
+  &__mv {
+    width: 100%;
+    height: 285px;
+    background: url(../../../images/front_mv.jpg) center/cover;
+    position: relative;
+
+    @include mixin.breakpoint(pc) {
+      height: 27.5vw;
+      max-height: 530px;
+    }
+
+      h1 {
+        position: absolute;
+        top: 122px;
+        left: 25px;
+        color: var.$white-color;
+        font-size: 3.6rem;
+        font-weight: 700;
+        line-height: 1.5;
+
+        @include mixin.breakpoint(tablet) {
+          top: 120px;
+          left: 86px;
+        }
+
+        @include mixin.breakpoint(pc) {
+          top: calc(50% - 2rem);
+          font-size: 4rem;
+        }
+       }
+  }
+}
+
+.p-takeOut {
+  background: url(../../../images/front_toc-1.jpg) center/cover;
+  h2 {
+    color: var.$title-color;
+  }
+}
+
+.p-eatIn {
+  background: url(../../../images/front_toc-2.jpg) center/cover;
+}
+
+.p-about {
+  // min-height: 691px;
+  background: url(../../../images/front_about_map.jpg) center/cover;
+  position: relative;
+
+    &__bg {
+      background-color: rgb(0 0 0 /.28);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 415px;
+
+      @include mixin.breakpoint(tablet) {
+        overflow-y: hidden;
+      }
+    }
+    &__text {
+      padding: 42px 40px;
+      min-height: 691px;
+      background-color: rgb(0 0 0 /.3);
+      color: var.$white-color;
+
+      @include mixin.breakpoint(tablet) {
+        min-height: 415px;
+      }
+
+        h2 {
+          position: relative;
+          font-size: 3rem;
+          line-height: 1.5;
+            &::before {
+              content: "";
+              width: 75px;
+              height: 2px;
+              background-color: var.$white-color;
+              position: absolute;
+              bottom: -15px;
+              left: 0;
+            }
+        }
+        p {
+          margin-top: 29px;
+          position: relative;
+          font-size: 1.4rem;
+          font-weight: 700;
+          line-height: 2.35;
+        }
+    }
+}

@@ -31,9 +31,9 @@
       position: absolute;
       top: 8px;
       right: 8px;
+      color: inherit;
       font-size: 2rem;
       line-height: 1;
-      color: inherit;
 
       @include mixin.breakpoint(tablet) {
         top: 20px;
