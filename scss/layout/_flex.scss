@@ -1,0 +1,19 @@
+@use "../foundation/mixin";
+
+@include mixin.breakpoint(pc) {
+  .l-container {
+    display: flex;
+    overflow: hidden;
+
+    .l-body {
+      flex-grow: 1;
+    }
+
+    .l-sideBar {
+      padding-bottom: 10000px;
+      margin-bottom: -10000px;
+      width: 20%;
+      min-width: 300px;
+    }
+  }
+}

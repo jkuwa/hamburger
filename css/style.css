@@ -49,8 +49,7 @@ ul {
 }
 @media (min-width: 1200px) {
   .l-header {
-    padding: 66px 31px 67px 4%;
-    width: 80%;
+    padding: 66px 31px 67px 65px;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -58,11 +57,6 @@ ul {
 
 .l-main {
   width: 100%;
-}
-@media (min-width: 1200px) {
-  .l-main {
-    width: 80%;
-  }
 }
 .l-main__toc {
   padding: 20px 20px 49px;
@@ -84,6 +78,7 @@ ul {
     padding-top: min(7%, 120px);
     padding-bottom: min(8%, 130px);
     height: 75.4vw;
+    max-height: 1447px;
     justify-content: center;
     gap: 80px;
   }
@@ -114,6 +109,53 @@ ul {
   }
 }
 
+.l-menu {
+  padding: 178px 0 178px 46px;
+  width: 328px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -367px;
+  z-index: 10;
+  overflow-y: auto;
+  transition: all 300ms 1ms ease-out;
+}
+@media (min-width: 768px) {
+  .l-menu {
+    width: 367px;
+  }
+}
+@media (min-width: 1200px) {
+  .l-menu {
+    padding: 84px 0 84px 46px;
+    position: static;
+    height: auto;
+    transition: unset;
+  }
+}
+.l-menu.is-open {
+  right: 0;
+}
+
+body.is-open {
+  position: fixed;
+}
+
+@media (min-width: 1200px) {
+  .l-container {
+    display: flex;
+    overflow: hidden;
+  }
+  .l-container .l-body {
+    flex-grow: 1;
+  }
+  .l-container .l-sideBar {
+    padding-bottom: 10000px;
+    margin-bottom: -10000px;
+    width: 20%;
+    min-width: 300px;
+  }
+}
 .c-content {
   padding: 13px 0 16px;
   width: 100%;
@@ -136,7 +178,6 @@ ul {
     width: 40%;
     max-width: 617px;
     height: 100%;
-    max-height: 1197px;
   }
 }
 .c-content h2 {
@@ -157,6 +198,7 @@ ul {
 @media (min-width: 1200px) {
   .c-content h2 {
     padding-left: 22px;
+    font-size: min(4vw, 8rem);
   }
 }
 .c-content h2::before {
@@ -433,9 +475,11 @@ ul {
   width: 100%;
   height: 415px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .p-about__bg {
-    overflow-y: hidden;
+    width: 950px;
+    max-width: 100%;
+    height: 649px;
   }
 }
 .p-about__text {
@@ -449,10 +493,21 @@ ul {
     min-height: 415px;
   }
 }
+@media (min-width: 1200px) {
+  .p-about__text {
+    padding: 86px 0 0 119px;
+    min-height: 649px;
+  }
+}
 .p-about__text h2 {
   position: relative;
   font-size: 3rem;
   line-height: 1.5;
+}
+@media (min-width: 1200px) {
+  .p-about__text h2 {
+    font-size: 3.6rem;
+  }
 }
 .p-about__text h2::before {
   content: "";
@@ -463,12 +518,25 @@ ul {
   bottom: -15px;
   left: 0;
 }
+@media (min-width: 1200px) {
+  .p-about__text h2::before {
+    bottom: -50px;
+  }
+}
 .p-about__text p {
   margin-top: 29px;
   position: relative;
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 2.35;
+}
+@media (min-width: 1200px) {
+  .p-about__text p {
+    margin-top: 109px;
+    width: 697px;
+    max-width: 100%;
+    font-size: 1.6rem;
+  }
 }
 
 .p-footer {
@@ -510,6 +578,9 @@ ul {
   }
 }
 
+.p-nav {
+  background-color: #F2EDE9;
+}
 .p-nav__mask {
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
@@ -521,15 +592,7 @@ ul {
 }
 
 .p-menu {
-  padding: 178px 0 178px 46px;
-  width: 328px;
-  height: 100vh;
   background-color: #F2EDE9;
-  position: fixed;
-  top: 0;
-  right: -328px;
-  z-index: 10;
-  overflow-y: auto;
   color: #707070;
   font-family: "m-plus-1m", sans-serif;
   font-size: 2.4rem;
@@ -543,6 +606,11 @@ ul {
   position: absolute;
   top: 8px;
   right: 11px;
+}
+@media (min-width: 1200px) {
+  .p-menu__btn {
+    display: none;
+  }
 }
 .p-menu__btn > span {
   font-size: 0;
@@ -565,17 +633,39 @@ ul {
 .p-menu h2 {
   display: none;
   font-family: "Roboto", sans-serif;
+  font-size: 3.4rem;
   font-weight: 700;
   font-style: normal;
+  line-height: 1.17;
+}
+@media (min-width: 1200px) {
+  .p-menu h2 {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .p-menu .p-menuList {
+    margin-top: 90px;
+  }
 }
 .p-menu .p-menuList > li:not(:first-child) {
   margin-top: 60px;
+}
+@media (min-width: 768px) {
+  .p-menu .p-menuList > li:not(:first-child) {
+    margin-top: 48px;
+  }
 }
 .p-menu .p-menuList__item {
   margin-top: 40px;
   padding-left: 20px;
   font-size: 2rem;
   font-weight: 400;
+}
+@media (min-width: 768px) {
+  .p-menu .p-menuList__item {
+    margin-top: 32px;
+  }
 }
 .p-menu .p-menuList__item li + li {
   margin-top: 20px;

@@ -4,7 +4,7 @@
   width: 100%;
 
   @include mixin.breakpoint(pc) {
-    width: 80%;
+    // width: 80%;
   }
 
   &__toc {
@@ -25,6 +25,7 @@
       padding-top: min( 7%, 120px);
       padding-bottom: min( 8%, 130px);
       height: 75.4vw;
+      max-height: 1447px;
       justify-content: center;
       gap: 80px;
     }

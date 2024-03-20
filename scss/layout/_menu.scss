@@ -1,0 +1,32 @@
+@use "../foundation/mixin";
+
+.l-menu {
+  padding: 178px 0 178px 46px;
+  width: 328px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -367px;
+  z-index: 10;
+  overflow-y: auto;
+  transition: all 300ms 1ms ease-out;
+
+  @include mixin.breakpoint(tablet) {
+    width: 367px;
+  }
+
+  @include mixin.breakpoint(pc) {
+    padding: 84px 0 84px 46px;
+    position: static;
+    height: auto;
+    transition: unset;
+  }
+
+  &.is-open {
+    right: 0;
+  }
+}
+
+body.is-open {
+  position: fixed;
+}
