@@ -12,16 +12,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUSa+1p:wght@400;700&family=Roboto:wght@700&display=swap"
     rel="stylesheet">
-  <script>
-    (function (d) {
-      var config = {
-        kitId: 'kky5huy',
-        scriptTimeout: 3000,
-        async: true
-      },
-        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-    })(document);
-  </script>
 </head>
 
 <body>
@@ -37,8 +27,6 @@
 
   <main class="l-main p-main">
     <div class="p-main__mv">
-      <!-- <img src="images/front_mv-sp.jpg" alt="ハンバーガー" class="p-main__mv--sp">
-        <img src="images/front_mv.jpg" alt="ハンバーガー" class="p-main__mv--pc"> -->
       <h1>ダミーサイト</h1>
     </div>
     <div class="l-main__toc">
@@ -79,6 +67,23 @@
       </section>
     </div>
   </main>
+  <aside class="l-nav">
+    <nav>
+      <ul>
+        <li>バーガー</li>
+        <li>サイド</li>
+        <li>ドリンク</li>
+      </ul>
+    </nav>
+  </aside>
+
+  <footer class="l-footer p-footer">
+    <ul class="p-footer__nav">
+      <li>ショップ情報</li>
+      <li>ヒストリー</li>
+    </ul>
+    <small>Copyright: RaiseTech</small>
+  </footer>
 </body>
 
 </html>

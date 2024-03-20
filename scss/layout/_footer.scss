@@ -1,0 +1,14 @@
+@use "../foundation/mixin";
+
+.l-footer {
+  padding: 20px 0 16px;
+  height: 150px;
+
+  @include mixin.breakpoint(tablet) {
+    padding: 35px 0 24px;
+  }
+
+  @include mixin.breakpoint(pc) {
+    padding: 46px 0 27px;
+  }
+}

@@ -11,6 +11,7 @@
 
 @use "layout/header";
 @use "layout/main";
+@use "layout/footer";
 
 
 //component
@@ -21,5 +22,6 @@
 //project
 
 @use "object/project/p-header";
-@use "object/project/p-main"
+@use "object/project/p-main";
+@use "object/project/p-footer";
 

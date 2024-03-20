@@ -1,0 +1,41 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variables" as var;
+
+.p-footer {
+  background: url(../../images/footer_bg.png) repeat;
+  color: var.$white-color;
+  text-align: center;
+
+    &__nav {
+      display: flex;
+      justify-content: center;
+      font-size: 1.8rem;
+      line-height: 1;
+
+      @include mixin.breakpoint(tablet) {
+        font-size: 2rem;
+      }
+
+        li {
+          padding: 0 8px;
+
+            & + li {
+              border-left: 2px solid var.$white-color;
+            }
+        }
+    }
+    small {
+      margin-top: 74px;
+      display: inline-block;
+      font-size: 1.4rem;
+      line-height: 1.5;
+
+      @include mixin.breakpoint(tablet) {
+        margin-top: 49px
+      }
+
+      @include mixin.breakpoint(pc) {
+        margin-top: 36px;
+      }
+    }
+}
