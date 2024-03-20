@@ -6,91 +6,99 @@
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
-    &__title {
-      font-size: 4rem;
-      line-height: 1.17;
 
-      @include mixin.breakpoint(pc) {
-        font-size: clamp(4rem, 3.3vw, 6.4rem);
-      }
+  &__title {
+    font-size: 4rem;
+    line-height: 1.17;
+
+    @include mixin.breakpoint(pc) {
+      font-size: clamp(4rem, 3.3vw, 6.4rem);
     }
-    &__search {
-      margin-top: 40px;
-      width: 86%;
-      max-width: 546px;
-
-      @include mixin.breakpoint(tablet) {
-        margin-top: 38px;
-      }
-
-      @include mixin.breakpoint(pc) {
-        margin-top: 0;
-      }
-.p-searchBox {
-  position: relative;
-  &::before {
-    content: "";
-    width: 24px;
-    height: 24px;
-    background: url(../../../images/header_searchBox.svg);
-    position: absolute;
-    top: 10px;
-    left: 10px;
   }
-  input {
-    margin-right: 16px;
-    padding-left: 40px;
-    width: calc(100% - 9rem - 16px);
-    height: 46px;
-    border: 1px solid var.$gray-color;
-    border-radius: 10px 8px 10px 10px;
-    background: var.$white-color;
-    
+
+  &__search {
+    margin-top: 40px;
+    width: 86%;
+    max-width: 546px;
+
     @include mixin.breakpoint(tablet) {
-      margin-right: 14px;
-      width: calc(100% - 13.6rem - 14px);
+      margin-top: 38px;
     }
+
+    @include mixin.breakpoint(pc) {
+      margin-top: 0;
+    }
+
+    .p-searchBox {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background: url(../../../images/header_searchBox.svg);
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+
+      input {
+        margin-right: 16px;
+        padding-left: 40px;
+        width: calc(100% - 9rem - 16px);
+        height: 46px;
+        border: 1px solid var.$gray-color;
+        border-radius: 10px 8px 10px 10px;
+        background: var.$white-color;
+
+        @include mixin.breakpoint(tablet) {
+          margin-right: 14px;
+          width: calc(100% - 13.6rem - 14px);
+        }
+      }
+
+      button {
+        padding: 0 28px;
+        border: 1px solid var.$gray-color;
+        border-radius: 10px;
+        background: linear-gradient(to left bottom, var.$menuBtn-1, var.$menuBtn-2);
+        font-family: "M PLUS 1p", sans-serif;
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: inherit;
+        line-height: 4.4rem;
+
+        @include mixin.breakpoint(tablet) {
+          padding: 0 51px;
+        }
+      }
+    }
+
   }
-  button {
-    padding: 0 28px;
-    border: 1px solid var.$gray-color;
-    border-radius: 10px;
-    background: linear-gradient( to left bottom, var.$menuBtn-1, var.$menuBtn-2);
-    font-family: "M PLUS 1p", sans-serif;
-    font-weight: 700;
-    font-size: 1.6rem;
+
+  &__menuBtn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
     color: inherit;
-    line-height: 4.4rem;
+    font-size: 2rem;
+    line-height: 1;
 
     @include mixin.breakpoint(tablet) {
-      padding: 0 51px;
+      top: 20px;
+      right: 25px;
+      font-size: 3.4rem;
+    }
+
+    @include mixin.breakpoint(pc) {
+      display: none;
     }
   }
 }
 
-    }
-    &__menuBtn {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      color: inherit;
-      font-size: 2rem;
-      line-height: 1;
-
-      @include mixin.breakpoint(tablet) {
-        top: 20px;
-        right: 25px;
-        font-size: 3.4rem;
-      }
-
-      @include mixin.breakpoint(pc) {
-        display: none;
-      }
-    }
-}
-
 .p-searchBox {
   position: relative;
+
   &::before {
     content: "";
     width: 24px;
@@ -100,6 +108,7 @@
     top: 10px;
     left: 10px;
   }
+
   input {
     margin-right: 16px;
     padding-left: 40px;
@@ -108,17 +117,18 @@
     border: 1px solid var.$gray-color;
     border-radius: 10px 8px 10px 10px;
     background: var.$white-color;
-    
+
     @include mixin.breakpoint(tablet) {
       margin-right: 14px;
       width: calc(100% - 13.6rem - 14px);
     }
   }
+
   button {
     padding: 0 28px;
     border: 1px solid var.$gray-color;
     border-radius: 10px;
-    background: linear-gradient( to left bottom, var.$menuBtn-1, var.$menuBtn-2);
+    background: linear-gradient(to left bottom, var.$menuBtn-1, var.$menuBtn-2);
     font-family: "M PLUS 1p", sans-serif;
     font-weight: 700;
     font-size: 1.6rem;

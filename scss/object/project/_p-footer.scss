@@ -19,7 +19,7 @@
         li {
           padding: 0 8px;
 
-            & + li {
+            + li {
               border-left: 2px solid var.$white-color;
             }
         }

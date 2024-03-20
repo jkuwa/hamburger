@@ -3,9 +3,8 @@
 @use "../../foundation/variables" as var;
 
 
-//front page  - content
 .c-content {
-  padding: 13px 0 16px; 
+  padding: 13px 0 16px;
   width: 100%;
   max-width: 450px;
   height: 642px;
@@ -26,92 +25,96 @@
     height: 100%;
   }
 
-    h2 {
-      padding-left: 13px;
-      position: relative;
-      color: var.$white-color;
-      font-family: "Roboto", sans-serif;
-      font-size: 4.1rem;
-      font-weight: 700;
-      font-style: normal;
-      line-height: 1.17;
+  h2 {
+    padding-left: 13px;
+    position: relative;
+    color: var.$white-color;
+    font-family: "Roboto", sans-serif;
+    font-size: 4.1rem;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.17;
+
+    @include mixin.breakpoint(tablet) {
+      font-size: 4.4rem;
+    }
+
+    @include mixin.breakpoint(pc) {
+      padding-left: 22px;
+      font-size: min(4vw, 8rem);
+    }
+
+    &::before {
+      content: "";
+      width: 34px;
+      height: 4px;
+      background-color: var.$white-color;
+      position: absolute;
+      bottom: -21.3px;
+      left: 15px;
 
       @include mixin.breakpoint(tablet) {
-        font-size: 4.4rem;
+        width: 36px;
+        bottom: -25.6px;
       }
 
       @include mixin.breakpoint(pc) {
-        padding-left: 22px;
-        font-size: min(4vw, 8rem);
+        width: 63px;
+        bottom: -38.5px;
+        left: 25.5px;
       }
-
-        &::before {
-          content: "";
-          width: 34px;
-          height: 4px;
-          background-color: var.$white-color;
-          position: absolute;
-          bottom: -21.3px;
-          left: 15px;
-
-          @include mixin.breakpoint(tablet) {
-            width: 36px;
-            bottom: -25.6px;
-          }
-
-          @include mixin.breakpoint(pc) {
-            width: 63px;
-            bottom: -38.5px;
-            left: 25.5px;
-          }
-        }
     }
-    dl {
-      margin: 0 16px;
+  }
+
+  dl {
+    margin: 0 16px;
+
+    @include mixin.breakpoint(pc) {
+      margin: 0 20px;
+    }
+  }
+
+  &__dl {
+    padding: 16px;
+    background-color: rgb(255 255 255 /.8);
+    color: var.$font-color;
+
+    @include mixin.breakpoint(pc) {
+      padding: 14px 20px;
+    }
+
+    &+.c-content__dl {
+      margin-top: 16px;
 
       @include mixin.breakpoint(pc) {
-        margin: 0 20px;
+        margin-top: 20px;
       }
     }
-    &__dl {
-      padding: 16px;
-      background-color: rgb(255 255 255 /.8);
-      color: var.$font-color;
+
+    dt {
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.1;
+
+      @include mixin.breakpoint(tablet) {
+        font-size: 2.4rem;
+        line-height: 1;
+      }
+    }
+
+    dd {
+      margin-top: 8px;
+      font-size: 1.6rem;
+      line-height: 1.5;
+
+      @include mixin.breakpoint(tablet) {
+        margin-top: 16px;
+        font-size: 1.4rem;
+      }
 
       @include mixin.breakpoint(pc) {
-        padding: 14px 20px;
+        margin-top: 18px;
       }
-
-        & + .c-content__dl {
-          margin-top: 16px;
-
-          @include mixin.breakpoint(pc) {
-            margin-top: 20px;
-          }
-        }
-        dt {
-          font-size: 2.2rem;
-          font-weight: 700;
-          line-height: 1.1;
-
-          @include mixin.breakpoint(tablet) {
-            font-size: 2.4rem;
-            line-height: 1;
-          }
-        }
-        dd {
-          margin-top: 8px;
-          font-size: 1.6rem;
-          line-height: 1.5;
-
-          @include mixin.breakpoint(tablet) {
-            margin-top: 16px;
-            font-size: 1.4rem;
-          }
-
-          @include mixin.breakpoint(pc) {
-            margin-top: 18px;
-          }
-        }
     }
+  }
 }
