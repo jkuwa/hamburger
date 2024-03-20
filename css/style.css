@@ -11,6 +11,7 @@ body {
   font-optical-sizing: auto;
   line-height: 1.7;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 img {
@@ -110,50 +111,6 @@ ul {
 @media (min-width: 1200px) {
   .l-footer {
     padding: 46px 0 27px;
-  }
-}
-
-.c-searchBox {
-  position: relative;
-}
-.c-searchBox::before {
-  content: "";
-  width: 24px;
-  height: 24px;
-  background: url(../../../images/header_searchBox.svg);
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-.c-searchBox input {
-  margin-right: 16px;
-  padding-left: 40px;
-  width: calc(100% - 9rem - 16px);
-  height: 46px;
-  border: 1px solid #707070;
-  border-radius: 10px 8px 10px 10px;
-  background: #fff;
-}
-@media (min-width: 768px) {
-  .c-searchBox input {
-    margin-right: 14px;
-    width: calc(100% - 13.6rem - 14px);
-  }
-}
-.c-searchBox button {
-  padding: 0 28px;
-  border: 1px solid #707070;
-  border-radius: 10px;
-  background: linear-gradient(to left bottom, #F2EDE9, #DED8D3);
-  font-family: "M PLUS 1p", sans-serif;
-  font-weight: 700;
-  font-size: 1.6rem;
-  color: inherit;
-  line-height: 4.4rem;
-}
-@media (min-width: 768px) {
-  .c-searchBox button {
-    padding: 0 51px;
   }
 }
 
@@ -308,6 +265,49 @@ ul {
     margin-top: 0;
   }
 }
+.p-header__search .p-searchBox {
+  position: relative;
+}
+.p-header__search .p-searchBox::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(../../../images/header_searchBox.svg);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.p-header__search .p-searchBox input {
+  margin-right: 16px;
+  padding-left: 40px;
+  width: calc(100% - 9rem - 16px);
+  height: 46px;
+  border: 1px solid #707070;
+  border-radius: 10px 8px 10px 10px;
+  background: #fff;
+}
+@media (min-width: 768px) {
+  .p-header__search .p-searchBox input {
+    margin-right: 14px;
+    width: calc(100% - 13.6rem - 14px);
+  }
+}
+.p-header__search .p-searchBox button {
+  padding: 0 28px;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  background: linear-gradient(to left bottom, #F2EDE9, #DED8D3);
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: inherit;
+  line-height: 4.4rem;
+}
+@media (min-width: 768px) {
+  .p-header__search .p-searchBox button {
+    padding: 0 51px;
+  }
+}
 .p-header__menuBtn {
   position: absolute;
   top: 8px;
@@ -326,6 +326,50 @@ ul {
 @media (min-width: 1200px) {
   .p-header__menuBtn {
     display: none;
+  }
+}
+
+.p-searchBox {
+  position: relative;
+}
+.p-searchBox::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(../../../images/header_searchBox.svg);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.p-searchBox input {
+  margin-right: 16px;
+  padding-left: 40px;
+  width: calc(100% - 9rem - 16px);
+  height: 46px;
+  border: 1px solid #707070;
+  border-radius: 10px 8px 10px 10px;
+  background: #fff;
+}
+@media (min-width: 768px) {
+  .p-searchBox input {
+    margin-right: 14px;
+    width: calc(100% - 13.6rem - 14px);
+  }
+}
+.p-searchBox button {
+  padding: 0 28px;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  background: linear-gradient(to left bottom, #F2EDE9, #DED8D3);
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: inherit;
+  line-height: 4.4rem;
+}
+@media (min-width: 768px) {
+  .p-searchBox button {
+    padding: 0 51px;
   }
 }
 
@@ -464,5 +508,76 @@ ul {
   .p-footer small {
     margin-top: 36px;
   }
+}
+
+.p-nav__mask {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.p-menu {
+  padding: 178px 0 178px 46px;
+  width: 328px;
+  height: 100vh;
+  background-color: #F2EDE9;
+  position: fixed;
+  top: 0;
+  right: -328px;
+  z-index: 10;
+  overflow-y: auto;
+  color: #707070;
+  font-family: "m-plus-1m", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.5;
+}
+.p-menu__btn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 8px;
+  right: 11px;
+}
+.p-menu__btn > span {
+  font-size: 0;
+}
+.p-menu__btn::before, .p-menu__btn::after {
+  content: "";
+  width: 45px;
+  height: 6px;
+  background: #707070;
+  display: block;
+  position: absolute;
+  top: 18px;
+}
+.p-menu__btn::before {
+  transform: rotate(45deg);
+}
+.p-menu__btn::after {
+  transform: rotate(-45deg);
+}
+.p-menu h2 {
+  display: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.p-menu .p-menuList > li:not(:first-child) {
+  margin-top: 60px;
+}
+.p-menu .p-menuList__item {
+  margin-top: 40px;
+  padding-left: 20px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.p-menu .p-menuList__item li + li {
+  margin-top: 20px;
 }
 /*# sourceMappingURL=style.css.map */
