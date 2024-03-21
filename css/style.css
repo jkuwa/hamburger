@@ -75,6 +75,7 @@ ul {
     padding: 40px 0;
     flex-direction: row;
     justify-content: center;
+    align-items: stretch;
     gap: min(4.7%, 50px);
   }
 }
@@ -82,7 +83,6 @@ ul {
   .l-main__toc .l-toc__wrapper {
     padding-top: min(7%, 120px);
     padding-bottom: min(8%, 130px);
-    justify-content: center;
     gap: 80px;
   }
 }
@@ -92,6 +92,11 @@ ul {
   max-width: 418px;
 }
 @media (min-width: 768px) {
+  .l-about__inner {
+    max-width: 918px;
+  }
+}
+@media (min-width: 1200px) {
   .l-about__inner {
     max-width: 100%;
   }
@@ -146,10 +151,12 @@ body.is-open {
 
 @media (min-width: 1200px) {
   .l-container {
+    height: 100%;
     display: flex;
     overflow: hidden;
   }
   .l-container .l-body {
+    height: 100%;
     flex-grow: 1;
   }
   .l-container .l-sideBar {
@@ -180,6 +187,7 @@ body.is-open {
     padding: 28px 0 20px;
     width: 40%;
     max-width: 617px;
+    min-height: 800px;
   }
 }
 .c-content h2 {
@@ -230,7 +238,7 @@ body.is-open {
 }
 @media (min-width: 1200px) {
   .c-content dl {
-    margin: 200px 20px 0;
+    margin: 250px 20px 0;
   }
 }
 .c-content__dl {
@@ -491,6 +499,7 @@ body.is-open {
   padding: 42px 40px;
   min-height: 691px;
   background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
   color: #fff;
 }
 @media (min-width: 768px) {
@@ -530,7 +539,6 @@ body.is-open {
 }
 .p-about__text p {
   margin-top: 29px;
-  position: relative;
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 2.35;

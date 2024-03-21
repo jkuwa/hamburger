@@ -22,7 +22,7 @@
     padding: 28px 0 20px;
     width: 40%;
     max-width: 617px;
-    // height: 100%;
+    min-height: 800px;
   }
 
   h2 {
@@ -70,7 +70,7 @@
     margin: 200px 16px 0;
 
     @include mixin.breakpoint(pc) {
-      margin: 200px 20px 0;
+      margin: 250px 20px 0;
     }
   }
 
