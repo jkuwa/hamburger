@@ -25,6 +25,10 @@
     min-height: 800px;
   }
 
+  @include mixin.breakpoint(pc2) {
+    min-height: 1197px;
+  }
+
   h2 {
     padding-left: 13px;
     position: relative;

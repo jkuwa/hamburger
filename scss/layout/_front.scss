@@ -16,7 +16,7 @@
       gap: 20px;
 
       @include mixin.breakpoint(tablet) {
-        padding: 40px 0;
+        padding: 40px 20px;
         flex-direction: row;
         justify-content: center;
         align-items: stretch;
@@ -26,8 +26,6 @@
       @include mixin.breakpoint(pc) {
         padding-top: min(7%, 120px);
         padding-bottom: min(8%, 130px);
-        // height: 75.4vw;
-        // max-height: 1447px;
         gap: 80px;
       }
     }
@@ -40,6 +38,10 @@
 
   @include mixin.breakpoint(tablet) {
     max-width: 918px;
+  }
+
+  @include mixin.breakpoint(pc) {
+    max-width: 697px;
   }
 
   @include mixin.breakpoint(pc) {
