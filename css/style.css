@@ -57,8 +57,13 @@ ul {
 
 .l-main {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .l-main__toc {
+  flex-grow: 1;
+}
+.l-main__toc .l-toc__wrapper {
   padding: 20px 20px 49px;
   display: flex;
   flex-direction: column;
@@ -66,7 +71,7 @@ ul {
   gap: 20px;
 }
 @media (min-width: 768px) {
-  .l-main__toc {
+  .l-main__toc .l-toc__wrapper {
     padding: 40px 0;
     flex-direction: row;
     justify-content: center;
@@ -74,11 +79,9 @@ ul {
   }
 }
 @media (min-width: 1200px) {
-  .l-main__toc {
+  .l-main__toc .l-toc__wrapper {
     padding-top: min(7%, 120px);
     padding-bottom: min(8%, 130px);
-    height: 75.4vw;
-    max-height: 1447px;
     justify-content: center;
     gap: 80px;
   }
@@ -160,7 +163,7 @@ body.is-open {
   padding: 13px 0 16px;
   width: 100%;
   max-width: 450px;
-  height: 642px;
+  min-height: 642px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -169,7 +172,7 @@ body.is-open {
   .c-content {
     padding-top: 16px;
     width: 43%;
-    height: 681px;
+    min-height: 681px;
   }
 }
 @media (min-width: 1200px) {
@@ -177,7 +180,6 @@ body.is-open {
     padding: 28px 0 20px;
     width: 40%;
     max-width: 617px;
-    height: 100%;
   }
 }
 .c-content h2 {
@@ -224,11 +226,11 @@ body.is-open {
   }
 }
 .c-content dl {
-  margin: 0 16px;
+  margin: 200px 16px 0;
 }
 @media (min-width: 1200px) {
   .c-content dl {
-    margin: 0 20px;
+    margin: 200px 20px 0;
   }
 }
 .c-content__dl {
@@ -473,13 +475,16 @@ body.is-open {
   top: 0;
   left: 0;
   width: 100%;
-  height: 415px;
+  height: 60%;
+}
+@media (min-width: 768px) {
+  .p-about__bg {
+    height: 100%;
+  }
 }
 @media (min-width: 1200px) {
   .p-about__bg {
-    width: 950px;
-    max-width: 100%;
-    height: 649px;
+    width: 60%;
   }
 }
 .p-about__text {
@@ -495,7 +500,7 @@ body.is-open {
 }
 @media (min-width: 1200px) {
   .p-about__text {
-    padding: 86px 0 0 119px;
+    padding: 86px 119px;
     min-height: 649px;
   }
 }
@@ -533,9 +538,12 @@ body.is-open {
 @media (min-width: 1200px) {
   .p-about__text p {
     margin-top: 109px;
-    width: 697px;
-    max-width: 100%;
     font-size: 1.6rem;
+  }
+}
+@media (min-width: 1200px) {
+  .p-about__text p {
+    width: 697px;
   }
 }
 
