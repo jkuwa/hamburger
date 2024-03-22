@@ -2,5 +2,52 @@
 @use "../../foundation/variables" as var;
 
 .p-card {
-  
+  width: 100%;
+  background-color: var.$cardBg-color;
+  display: flex;
+  flex-direction: column;
+
+  @include mixin.breakpoint(tablet) {
+    flex-direction: row;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__caption {
+    padding: 32.5px 17px 43.7px;
+    color: var.$white-color;
+    text-align: center;
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    h4 {
+      margin-top: 21px;
+      font-weight: 700;
+    }
+
+    p {
+      margin-top: 7px;
+    }
+  }
+
+  .p-caption {
+    &__btn {
+      margin-top: 40px;
+      padding: 12px 42px;
+      display: inline-block;
+      color: var.$gray-color;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    &__text {
+      text-align: left;
+    }
+  }
 }

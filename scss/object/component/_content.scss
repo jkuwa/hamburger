@@ -107,8 +107,6 @@
 
     dd {
       margin-top: 8px;
-      font-size: 1.6rem;
-      line-height: 1.5;
 
       @include mixin.breakpoint(tablet) {
         margin-top: 16px;
