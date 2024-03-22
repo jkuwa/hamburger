@@ -50,7 +50,6 @@
     h2 {
       position: relative;
       font-size: 3rem;
-      line-height: 1.5;
 
       @include mixin.breakpoint(pc) {
         font-size: 3.6rem;

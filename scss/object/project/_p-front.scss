@@ -5,7 +5,7 @@
   background-color: var.$bg-color;
 
   &__mv {
-    height: 285px;
+    height: var.$mv_height;
     background: url(../../../images/front_mv.jpg);
     position: relative;
 
@@ -21,7 +21,6 @@
         color: var.$white-color;
         font-size: 3.6rem;
         font-weight: 700;
-        line-height: 1.5;
 
         @include mixin.breakpoint(tablet) {
           top: 120px;
