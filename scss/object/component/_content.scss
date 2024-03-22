@@ -81,7 +81,6 @@
   &__dl {
     padding: 16px;
     background-color: rgb(255 255 255 /.8);
-    color: var.$font-color;
 
     @include mixin.breakpoint(pc) {
       padding: 14px 20px;
