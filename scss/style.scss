@@ -13,7 +13,7 @@
 @use "layout/front";
 @use "layout/footer";
 @use "layout/menu";
-@use "layout/flex";
+@use "layout/main";
 
 
 //component
@@ -24,8 +24,8 @@
 //project
 
 @use "object/project/p-header";
-@use "object/project/searchBox";
+@use "object/project/p-searchBox";
 @use "object/project/p-front";
-@use "object/project/about";
+@use "object/project/p-about";
 @use "object/project/p-footer";
-@use "object/project/nav";
+@use "object/project/p-nav";
