@@ -1,0 +1,6 @@
+@use "../../foundation/variables" as var;
+
+.c-btn {
+  border: 1px solid var.$gray-color;
+  border-radius: 10px;
+}

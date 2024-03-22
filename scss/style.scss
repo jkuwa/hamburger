@@ -10,7 +10,6 @@
 //layout
 
 @use "layout/header";
-@use "layout/front";
 @use "layout/footer";
 @use "layout/menu";
 @use "layout/main";
@@ -18,6 +17,8 @@
 
 //component
 
+@use "object/component/input";
+@use "object/component/btn";
 @use "object/component/front_content";
 
 

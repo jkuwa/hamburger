@@ -14,13 +14,11 @@
     left: 10px;
   }
 
-  input {
+  &__input {
     margin-right: 16px;
     padding-left: 40px;
     width: calc(100% - 9rem - 16px);
     height: 46px;
-    border: 1px solid var.$gray-color;
-    border-radius: 10px 8px 10px 10px;
     background: var.$white-color;
 
     @include mixin.breakpoint(tablet) {
@@ -29,10 +27,8 @@
     }
   }
 
-  button {
-    padding: 0 28px;
-    border: 1px solid var.$gray-color;
-    border-radius: 10px;
+  &__btn {
+    padding: 0 28px;        
     background: linear-gradient(to left bottom, var.$menuBtn-1, var.$menuBtn-2);
     font-family: "M PLUS 1p", sans-serif;
     font-weight: 700;
