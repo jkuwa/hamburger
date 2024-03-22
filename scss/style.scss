@@ -19,7 +19,8 @@
 
 @use "object/component/input";
 @use "object/component/btn";
-@use "object/component/front_content";
+@use "object/component/mv";
+@use "object/component/content";
 
 
 //project
@@ -30,3 +31,4 @@
 @use "object/project/p-about";
 @use "object/project/p-footer";
 @use "object/project/p-nav";
+@use "object/project/p-archive";
