@@ -21,6 +21,11 @@ img {
   vertical-align: bottom;
 }
 
+a:hover,
+button:hover {
+  opacity: .7;
+}
+
 .roboto-bold {
   font-family: "Roboto", sans-serif;
   font-weight: 700;

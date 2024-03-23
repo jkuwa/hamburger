@@ -15,18 +15,15 @@
       background-image: url(../../../images/archive_mv_pc.jpg);
       background-position: center;
     }
-  }
 
-  &__mask {
-    width: 100%;
-    height: var.$mv_height;
-    background-color: rgb(0 0 0 /.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    @include mixin.breakpoint(pc) {
-      height: var.$mv_height--pc;
+    &::before {
+      content: "";
+      background-color: rgb(0 0 0 /.5);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;     
     }
   }
 
