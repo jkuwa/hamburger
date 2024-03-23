@@ -21,6 +21,7 @@
 @use "object/component/btn";
 @use "object/component/mv";
 @use "object/component/content";
+@use "object/component/pageList";
 
 
 //project
@@ -33,3 +34,4 @@
 @use "object/project/p-nav";
 @use "object/project/p-archive";
 @use "object/project/p-card";
+@use "object/project/p-pagination";

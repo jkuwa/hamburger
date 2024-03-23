@@ -1,0 +1,63 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variables" as var;
+
+.p-pagination {
+  margin-top: 62px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  color: var.$gray-color;
+
+  &__link {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 1.2rem;
+      height: 1.2rem;
+      border-top: 1px solid var.$gray-color;
+      border-right: 1px solid var.$gray-color;
+      position: absolute;
+      top: 0;
+    }
+    
+    &.--pre {
+      padding-left: 25.5px;
+
+      &::before,
+      &::after {
+        transform: rotate(-45deg);
+      }
+
+      &::before {
+        left: 0;
+      }
+  
+      &::after {
+        left: 8.5px;
+      }
+    }
+
+    &.--next {
+      padding-right: 25.5px;
+
+      &::before,
+      &::after {
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        right: 0;
+      }
+  
+      &::after {
+        right: 8.5px;
+      }
+    }
+  }
+
+  &__pcList {
+    display: none;
+  }
+}

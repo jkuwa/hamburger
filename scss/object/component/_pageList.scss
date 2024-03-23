@@ -1,0 +1,9 @@
+@use "../../foundation/variables" as var;
+
+.c-pageList {
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px solid var.$gray-color;
+  line-height: 3.5rem;
+  text-align: center;
+}
