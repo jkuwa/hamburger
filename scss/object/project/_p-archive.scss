@@ -5,6 +5,11 @@
   padding-bottom: 32px;
   background-color: var.$bg-color;
 
+  @include mixin.breakpoint(pc) {
+    padding-bottom: 64px;
+  }
+
+
   &__mv {
     height: var.$mv_height;
     background-image: url(../../../images/archive_mv.jpg);
@@ -78,16 +83,22 @@
       }
     }
   }
+
+  &__wrapper {
+    @include mixin.breakpoint(pc) {
+      width: 87%;
+    }
+  }
  
   &__main {
-    padding: 32px 20px 0;
+    margin-top: 32px;
 
     @include mixin.breakpoint(tablet) {
-      padding: 39px 40px 32px;
+      margin-top: 39px;
     }
 
     @include mixin.breakpoint(pc) {
-      padding: 63px 6.4%;
+      margin-top: 63px;
     }
 
     h2 {
@@ -105,19 +116,6 @@
       @include mixin.breakpoint(tablet) {
         margin-top: 20px;
       }
-    }
-  }
-
-  &__inner {
-    margin: 0 auto;
-    max-width: 400px;
-
-    @include mixin.breakpoint(tablet) {
-      max-width: 800px;
-    }
-
-    @include mixin.breakpoint(pc) {
-      max-width: 1353px;
     }
   }
 }
