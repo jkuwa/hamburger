@@ -1,4 +1,14 @@
+@use "../../foundation/mixin";
 
 .c-inner {
   margin: 0 auto;
+  max-width: 450px;
+
+  @include mixin.breakpoint(tablet) {
+    max-width: 950px;
+  }
+
+  @include mixin.breakpoint(pc) {
+    max-width: 1330px;
+  }
 }
