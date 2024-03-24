@@ -34,8 +34,18 @@
     }
   }
 
+  &__wrapper {
+    width: calc(100% - 80px);
+
+    @include mixin.breakpoint(pc) {
+      margin-left: min(7%, 120px);
+      width: 46%;
+      max-width: 950px;
+    }
+  }
+
   &__text {
-    padding: 42px 40px 57px;
+    padding: 42px 0 57px;
     height: 100%;
     min-height: 691px;
     position: relative;
@@ -47,9 +57,7 @@
     }
 
     @include mixin.breakpoint(pc) {
-      width: 60%;
-      max-width: 950px;
-      padding: 86px 119px 75px;
+      padding: 86px 0 75px;
       min-height: 649px;
     }
 

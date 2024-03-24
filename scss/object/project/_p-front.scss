@@ -14,33 +14,26 @@
       max-height: 530px;
     }
 
-      h1 {
-        position: absolute;
-        top: 122px;
-        left: 25px;
-        color: var.$white-color;
-        font-size: 3.6rem;
-        font-weight: 700;
+    h1 {
+      position: absolute;
+      top: 122px;
+      left: 25px;
+      color: var.$white-color;
+      font-size: 3.6rem;
+      font-weight: 700;
 
-        @include mixin.breakpoint(tablet) {
-          top: 120px;
-          left: 86px;
-        }
+      @include mixin.breakpoint(tablet) {
+        top: 120px;
+        left: 86px;
+      }
 
-        @include mixin.breakpoint(pc) {
-          top: calc(50% - 2rem);
-          font-size: 4rem;
-        }
-       }
-  }
-  &__inner {
-    width: calc(100% - 40px);
-
-    @include mixin.breakpoint(tablet) {
-      width: calc(100% - 80px);
+      @include mixin.breakpoint(pc) {
+        top: calc(50% - 2rem);
+        font-size: 4rem;
+      }
     }
-
   }
+
 
   .p-toc {
     padding: 20px 0 49px;
