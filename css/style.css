@@ -868,18 +868,24 @@ body.is-open {
 }
 .p-card .p-caption {
   padding: 32.5px 17px 43.7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
   color: #fff;
-  text-align: center;
 }
 @media (min-width: 768px) {
   .p-card .p-caption {
     padding: 31px 59px 40px 35px;
     width: 50%;
+    gap: 45px;
   }
 }
 @media (min-width: 1500px) {
   .p-card .p-caption {
     padding: 56px 104px 60px 63px;
+    gap: 60px;
   }
 }
 .p-card .p-caption__text {
@@ -913,21 +919,14 @@ body.is-open {
   }
 }
 .p-card .p-caption__btn {
-  margin-top: 40px;
   padding: 12px 42px;
   display: inline-block;
   color: #707070;
   font-weight: 700;
   line-height: 1;
 }
-@media (min-width: 768px) {
-  .p-card .p-caption__btn {
-    margin-top: 45px;
-  }
-}
 @media (min-width: 1500px) {
   .p-card .p-caption__btn {
-    margin-top: 60px;
     padding: 20px 106px;
   }
 }
