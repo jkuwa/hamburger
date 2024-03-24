@@ -6,7 +6,7 @@
 
   &__mv {
     height: var.$mv_height;
-    background: url(../../../images/front_mv.jpg);
+    background-image: url(../../../images/front_mv.jpg);
     position: relative;
 
     @include mixin.breakpoint(pc) {
@@ -33,28 +33,34 @@
         }
        }
   }
-  &__toc {
+  &__inner {
+    width: calc(100% - 40px);
 
-    .p-toc__wrapper {
-      padding: 20px 20px 49px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
+    @include mixin.breakpoint(tablet) {
+      width: calc(100% - 80px);
+    }
 
-      @include mixin.breakpoint(tablet) {
-        padding: 40px 20px;
-        flex-direction: row;
-        justify-content: center;
-        align-items: stretch;
-        gap: min(4.7%, 50px);
-      }
-  
-      @include mixin.breakpoint(pc) {
-        padding-top: min(7%, 120px);
-        padding-bottom: min(8%, 130px);
-        gap: 80px;
-      }
+  }
+
+  .p-toc {
+    padding: 20px 0 49px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @include mixin.breakpoint(tablet) {
+      padding: 40px 0;
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      gap: min(4.7%, 50px);
+    }
+
+    @include mixin.breakpoint(pc) {
+      padding-top: min(7%, 120px);
+      padding-bottom: min(8%, 130px);
+      gap: 80px;
     }
   }
 }
