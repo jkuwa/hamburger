@@ -22,6 +22,11 @@
   font-size: 2.4rem;
   font-weight: 700;
   font-style: normal;
+  transition: all 300ms 1ms ease-out;
+
+  @include mixin.breakpoint(pc) {
+    transition: unset;
+  }
 
   &__btn {
     width: 40px;
@@ -98,7 +103,7 @@
         margin-top: 32px;
       }
 
-      li+li {
+      li:not(:first-child) {
         margin-top: 20px;
       }
     }

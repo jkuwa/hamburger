@@ -3,7 +3,7 @@
 @use "../../foundation/variables" as var;
 
 
-.c-content {
+.p-content {
   padding: 13px 0 16px;
   width: 100%;
   min-height: 642px;
@@ -82,7 +82,7 @@
       padding: 14px 20px;
     }
 
-    &+.c-content__dl {
+    &:not(:first-child) {
       margin-top: 16px;
 
       @include mixin.breakpoint(pc) {
@@ -113,5 +113,16 @@
         margin-top: 18px;
       }
     }
+  }
+
+  &.-takeOut {
+    background: url(../../../images/front_toc-1.jpg) center/cover;
+    h2 {
+      color: var.$title-color;
+    }
+  }
+
+  &.-eatIn {
+    background: url(../../../images/front_toc-2.jpg) center/cover;
   }
 }

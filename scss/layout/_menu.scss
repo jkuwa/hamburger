@@ -9,7 +9,6 @@
   right: -367px;
   z-index: 10;
   overflow-y: auto;
-  transition: all 300ms 1ms ease-out;
 
   @include mixin.breakpoint(tablet) {
     width: 367px;
@@ -20,7 +19,6 @@
     width: 100%;
     position: static;
     height: auto;
-    transition: unset;
   }
 
   &.is-open {

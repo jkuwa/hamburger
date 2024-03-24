@@ -20,7 +20,6 @@
 @use "object/component/input";
 @use "object/component/btn";
 @use "object/component/mv";
-@use "object/component/content";
 @use "object/component/pageList";
 @use "object/component/wrapper";
 
@@ -30,6 +29,7 @@
 @use "object/project/p-header";
 @use "object/project/p-searchBox";
 @use "object/project/p-front";
+@use "object/project/p-content";
 @use "object/project/p-about";
 @use "object/project/p-footer";
 @use "object/project/p-nav";

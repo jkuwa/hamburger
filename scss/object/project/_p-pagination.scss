@@ -54,7 +54,7 @@
       }
     }
     
-    &.--pre {
+    &.-pre {
       padding-left: 25.5px;
 
       @include mixin.breakpoint(tablet) {
@@ -75,7 +75,7 @@
       }
     }
 
-    &.--next {
+    &.-next {
       padding-right: 25.5px;
 
       @include mixin.breakpoint(tablet) {
