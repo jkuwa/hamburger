@@ -149,25 +149,9 @@ body.is-open {
   background-position: center;
 }
 
-.c-inner {
-  margin: 0 auto;
-  max-width: 450px;
-}
-@media (min-width: 768px) {
-  .c-inner {
-    max-width: 950px;
-  }
-}
-@media (min-width: 1200px) {
-  .c-inner {
-    max-width: 1330px;
-  }
-}
-
 .c-content {
   padding: 13px 0 16px;
   width: 100%;
-  max-width: 450px;
   min-height: 642px;
   display: flex;
   flex-direction: column;
@@ -176,15 +160,12 @@ body.is-open {
 @media (min-width: 768px) {
   .c-content {
     padding-top: 16px;
-    width: 43%;
     min-height: 681px;
   }
 }
 @media (min-width: 1200px) {
   .c-content {
     padding: 28px 0 20px;
-    width: 40%;
-    max-width: 617px;
     min-height: 800px;
   }
 }
@@ -295,6 +276,22 @@ body.is-open {
   text-align: center;
 }
 
+.c-inner {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 450px;
+}
+@media (min-width: 768px) {
+  .c-inner {
+    max-width: 950px;
+  }
+}
+@media (min-width: 1200px) {
+  .c-inner {
+    max-width: 1330px;
+  }
+}
+
 .p-header {
   color: #707070;
   font-family: "Roboto", sans-serif;
@@ -391,7 +388,7 @@ body.is-open {
 }
 .p-main__mv {
   height: 285px;
-  background: url(../../../images/front_mv.jpg);
+  background-image: url(../../../images/front_mv.jpg);
   position: relative;
 }
 @media (min-width: 1200px) {
@@ -420,16 +417,24 @@ body.is-open {
     font-size: 4rem;
   }
 }
-.p-main__toc .p-toc__wrapper {
-  padding: 20px 20px 49px;
+.p-main__inner {
+  width: calc(100% - 40px);
+}
+@media (min-width: 768px) {
+  .p-main__inner {
+    width: calc(100% - 80px);
+  }
+}
+.p-main .p-toc {
+  padding: 20px 0 49px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 @media (min-width: 768px) {
-  .p-main__toc .p-toc__wrapper {
-    padding: 40px 20px;
+  .p-main .p-toc {
+    padding: 40px 0;
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
@@ -437,7 +442,7 @@ body.is-open {
   }
 }
 @media (min-width: 1200px) {
-  .p-main__toc .p-toc__wrapper {
+  .p-main .p-toc {
     padding-top: min(7%, 120px);
     padding-bottom: min(8%, 130px);
     gap: 80px;

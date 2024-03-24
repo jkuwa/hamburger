@@ -6,7 +6,6 @@
 .c-content {
   padding: 13px 0 16px;
   width: 100%;
-  max-width: 450px;
   min-height: 642px;
   display: flex;
   flex-direction: column;
@@ -14,14 +13,11 @@
 
   @include mixin.breakpoint(tablet) {
     padding-top: 16px;
-    width: 43%;
     min-height: 681px;
   }
 
   @include mixin.breakpoint(pc) {
     padding: 28px 0 20px;
-    width: 40%;
-    max-width: 617px;
     min-height: 800px;
   }
 
