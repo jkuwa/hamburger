@@ -673,6 +673,9 @@ body.is-open {
     margin-top: 48px;
   }
 }
+.p-menu .p-menuList h3 {
+  font-size: 2.4rem;
+}
 .p-menu .p-menuList__item {
   margin-top: 40px;
   padding-left: 20px;
