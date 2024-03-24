@@ -19,7 +19,7 @@
       border-top: 1px solid var.$gray-color;
       border-right: 1px solid var.$gray-color;
       position: absolute;
-      top: 0;
+      top: 0.2rem;
     }
     
     &.--pre {
@@ -27,7 +27,7 @@
 
       &::before,
       &::after {
-        transform: rotate(-45deg);
+        transform: rotate(-135deg);
       }
 
       &::before {
