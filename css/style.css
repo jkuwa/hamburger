@@ -95,6 +95,7 @@ ul {
 @media (min-width: 1200px) {
   .l-menu {
     padding: 84px 0 84px 46px;
+    width: 100%;
     position: static;
     height: auto;
     transition: unset;

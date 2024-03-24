@@ -17,6 +17,7 @@
 
   @include mixin.breakpoint(pc) {
     padding: 84px 0 84px 46px;
+    width: 100%;
     position: static;
     height: auto;
     transition: unset;
