@@ -33,7 +33,6 @@
     padding: 42px 40px 57px;
     height: 100%;
     min-height: 691px;
-    background-color: rgb(0 0 0 /.3);
     position: relative;
     color: var.$white-color;
 
@@ -45,6 +44,16 @@
     @include mixin.breakpoint(pc) {
       padding: 86px 119px 75px;
       min-height: 649px;
+    }
+
+    &::before {
+      content: "";
+      background-color: rgb(0 0 0 /.3);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
     }
 
     h2 {
@@ -72,6 +81,7 @@
 
     p {
       margin-top: 29px;
+      position: relative;
       font-size: 1.4rem;
       font-weight: 700;
       line-height: 2.35;
@@ -79,14 +89,11 @@
       @include mixin.breakpoint(pc) {
         margin-top: 109px;
         font-size: 1.6rem;
-        width: 45%;
-        max-width: 697px;
       }
     }
   }
 
   &__inner {
-    margin: 0 auto;
     max-width: 418px;
 
     @include mixin.breakpoint(tablet) {
@@ -94,11 +101,9 @@
     }
 
     @include mixin.breakpoint(pc) {
+      margin: 0;
+      width: 45%;
       max-width: 697px;
-    }
-
-    @include mixin.breakpoint(pc) {
-      max-width: 100%;
     }
   }
 }
