@@ -6,6 +6,16 @@
   position: relative;
   flex-grow: 1;    //l-mainへのflex子要素
 
+  &::before {
+    content: "";
+    background-color: rgb(0 0 0 /.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
   &__bg {
     background-color: rgb(0 0 0 /.28);
     position: absolute;
@@ -19,11 +29,6 @@
     }
 
     @include mixin.breakpoint(pc) {
-      width: 60%;
-      max-width: 950px;
-    }
-
-    @include mixin.breakpoint(pc2) {
       width: 60%;
       max-width: 950px;
     }
@@ -42,18 +47,10 @@
     }
 
     @include mixin.breakpoint(pc) {
+      width: 60%;
+      max-width: 950px;
       padding: 86px 119px 75px;
       min-height: 649px;
-    }
-
-    &::before {
-      content: "";
-      background-color: rgb(0 0 0 /.3);
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
     }
 
     h2 {
@@ -90,20 +87,6 @@
         margin-top: 109px;
         font-size: 1.6rem;
       }
-    }
-  }
-
-  &__inner {
-    max-width: 418px;
-
-    @include mixin.breakpoint(tablet) {
-      max-width: 918px;
-    }
-
-    @include mixin.breakpoint(pc) {
-      margin: 0;
-      width: 45%;
-      max-width: 697px;
     }
   }
 }

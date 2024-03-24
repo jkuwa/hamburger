@@ -405,7 +405,7 @@ body.is-open {
     font-size: 4rem;
   }
 }
-.p-main__toc .l-toc__wrapper {
+.p-main__toc .p-toc__wrapper {
   padding: 20px 20px 49px;
   display: flex;
   flex-direction: column;
@@ -413,7 +413,7 @@ body.is-open {
   gap: 20px;
 }
 @media (min-width: 768px) {
-  .p-main__toc .l-toc__wrapper {
+  .p-main__toc .p-toc__wrapper {
     padding: 40px 20px;
     flex-direction: row;
     justify-content: center;
@@ -422,7 +422,7 @@ body.is-open {
   }
 }
 @media (min-width: 1200px) {
-  .p-main__toc .l-toc__wrapper {
+  .p-main__toc .p-toc__wrapper {
     padding-top: min(7%, 120px);
     padding-bottom: min(8%, 130px);
     gap: 80px;
@@ -474,7 +474,6 @@ body.is-open {
   padding: 42px 40px 57px;
   height: 100%;
   min-height: 691px;
-  background-color: rgba(0, 0, 0, 0.3);
   position: relative;
   color: #fff;
 }
@@ -489,6 +488,15 @@ body.is-open {
     padding: 86px 119px 75px;
     min-height: 649px;
   }
+}
+.p-about__text::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 .p-about__text h2 {
   position: relative;
@@ -515,6 +523,7 @@ body.is-open {
 }
 .p-about__text p {
   margin-top: 29px;
+  position: relative;
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 2.35;
@@ -523,8 +532,6 @@ body.is-open {
   .p-about__text p {
     margin-top: 109px;
     font-size: 1.6rem;
-    width: 45%;
-    max-width: 697px;
   }
 }
 .p-about__inner {
@@ -538,12 +545,9 @@ body.is-open {
 }
 @media (min-width: 1200px) {
   .p-about__inner {
+    margin: 0;
+    width: 45%;
     max-width: 697px;
-  }
-}
-@media (min-width: 1200px) {
-  .p-about__inner {
-    max-width: 100%;
   }
 }
 
@@ -942,13 +946,13 @@ body.is-open {
   border-top: 1px solid #707070;
   border-right: 1px solid #707070;
   position: absolute;
-  top: 0;
+  top: 0.2rem;
 }
 .p-pagination__link.--pre {
   padding-left: 25.5px;
 }
 .p-pagination__link.--pre::before, .p-pagination__link.--pre::after {
-  transform: rotate(-45deg);
+  transform: rotate(-135deg);
 }
 .p-pagination__link.--pre::before {
   left: 0;
