@@ -5,8 +5,6 @@
   &__mv {
     height: var.$single_height;
     background-image: url(../../../images/single_mv.jpg);
-    display: flex;
-    align-items: center;
 
     @include mixin.breakpoint(tablet) {
       height: var.$single_height--tab;

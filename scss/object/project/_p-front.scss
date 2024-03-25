@@ -7,7 +7,8 @@
   &__mv {
     height: var.$mv_height;
     background-image: url(../../../images/front_mv.jpg);
-    position: relative;
+    display: flex;
+    align-items: center;
 
     @include mixin.breakpoint(pc) {
       height: 27.5vw;
@@ -15,21 +16,13 @@
     }
 
     h1 {
-      position: absolute;
-      top: 122px;
-      left: 25px;
+      margin-left: 25px;
       color: var.$white-color;
       font-size: 3.6rem;
       font-weight: 700;
 
       @include mixin.breakpoint(tablet) {
-        top: 120px;
-        left: 86px;
-      }
-
-      @include mixin.breakpoint(pc) {
-        top: calc(50% - 2rem);
-        font-size: 4rem;
+        margin-left: 86px;
       }
     }
   }
