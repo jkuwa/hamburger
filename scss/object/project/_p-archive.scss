@@ -34,51 +34,44 @@
   }
 
   &__title {
-    position: absolute;
-    top: 106px;
-    left: 37px;
+    margin-left: 10%;
     color: var.$white-color;
     font-weight: 700;
 
     @include mixin.breakpoint(tablet) {
-      top: 107px;
-      left: 86px;
-    }
-
-    @include mixin.breakpoint(pc) {
-      top: 83px;
-      left: 86px;
+      margin-left: min(10%, 86px);
     }
 
     h1 {
+      height: calc(3.6rem + 1.6rem * 1.5 + 15px);  //spanも含めた高さ
       position: relative;
       font-family: "Roboto", sans-serif;
       font-size: 3.6rem;
       font-weight: 700;
       font-style: normal;
-      line-height: 1.17;
+      line-height: 1;
 
       @include mixin.breakpoint(tablet) {
+        height: auto;
         font-size: 6rem;
       }
 
       span {
         display: inline-block;
         position: absolute;
-        top: calc(100% + 12px);
+        top: calc(3.6rem + 15px);
         left: 0;
         font-size: 1.6rem;
-        font-weight: 400;
         line-height: 1.5;
         text-wrap: nowrap;
   
         @include mixin.breakpoint(tablet) {
-          top: 2.9rem;
+          top: 2.4rem;
           left: calc(100% + 19px);
         }
   
         @include mixin.breakpoint(pc) {
-          top: 3.1rem;
+          top: 2.6rem;
         }
       }
     }
@@ -87,6 +80,7 @@
   &__wrapper {
     @include mixin.breakpoint(pc) {
       width: 87%;
+      max-width: 1353px;
     }
   }
  
