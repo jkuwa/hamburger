@@ -1034,4 +1034,32 @@ body.is-open {
     display: inline-block;
   }
 }
+
+.p-single__mv {
+  height: 225px;
+  background-image: url(../../../images/single_mv.jpg);
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .p-single__mv {
+    height: 505px;
+  }
+}
+@media (min-width: 1200px) {
+  .p-single__mv {
+    height: 500px;
+  }
+}
+.p-single__title {
+  margin: 0 auto;
+  color: #fff;
+  font-size: 3.6rem;
+}
+@media (min-width: 768px) {
+  .p-single__title {
+    margin-left: 86px;
+    font-size: 6rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */

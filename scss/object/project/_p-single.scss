@@ -1,0 +1,30 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variables" as var;
+
+.p-single {
+  &__mv {
+    height: var.$single_height;
+    background-image: url(../../../images/single_mv.jpg);
+    display: flex;
+    align-items: center;
+
+    @include mixin.breakpoint(tablet) {
+      height: var.$single_height--tab;
+    }
+
+    @include mixin.breakpoint(pc) {
+      height: var.$single_height--pc;
+    }
+  }
+
+  &__title {
+    margin: 0 auto;
+    color: var.$white-color;
+    font-size: 3.6rem;
+
+    @include mixin.breakpoint(tablet) {
+      margin-left: 86px;
+      font-size: 6rem;
+    }
+  }
+}
