@@ -749,7 +749,7 @@ body.is-open {
   left: 0;
   font-size: 1.6rem;
   line-height: 1.5;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 @media (min-width: 768px) {
   .p-archive__title h1 span {
