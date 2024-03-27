@@ -39,6 +39,10 @@ ul {
   list-style: none;
 }
 
+cite {
+  font-style: normal;
+}
+
 .l-header {
   padding: 43px 0 39px;
   width: 100%;
@@ -1040,7 +1044,7 @@ body.is-open {
 }
 @media (min-width: 768px) {
   .p-single__mv {
-    height: 505px;
+    height: min(60vw, 500px);
   }
 }
 @media (min-width: 1200px) {
@@ -1216,5 +1220,17 @@ body.is-open {
 }
 .p-article__bold {
   font-weight: 700;
+}
+
+.u-page__mv {
+  background-image: url(../../../images/page_mv.jpg);
+}
+.u-page__title {
+  margin-left: 12%;
+}
+@media (min-width: 768px) {
+  .u-page__title {
+    margin-left: min(10%, 86px);
+  }
 }
 /*# sourceMappingURL=style.css.map */

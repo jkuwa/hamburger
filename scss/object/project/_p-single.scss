@@ -5,15 +5,15 @@
   background-color: var.$bg-color;
 
   &__mv {
-    height: var.$single_height;
+    height: 225px;
     background-image: url(../../../images/single_mv.jpg);
 
     @include mixin.breakpoint(tablet) {
-      height: var.$single_height--tab;
+      height: min(60vw, 500px);
     }
 
     @include mixin.breakpoint(pc) {
-      height: var.$single_height--pc;
+      height: 500px;
     }
   }
 

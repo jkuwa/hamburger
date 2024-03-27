@@ -1,0 +1,16 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variables" as var;
+
+.u-page {
+  &__mv {
+    background-image: url(../../../images/page_mv.jpg);
+  }
+
+  &__title {
+    margin-left: 12%;
+
+    @include mixin.breakpoint(tablet) {
+      margin-left: min(10%, 86px);
+    }
+  }
+}
