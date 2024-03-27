@@ -2,6 +2,8 @@
 @use "../../foundation/variables" as var;
 
 .p-single {
+  background-color: var.$bg-color;
+
   &__mv {
     height: var.$single_height;
     background-image: url(../../../images/single_mv.jpg);
@@ -30,6 +32,14 @@
 .p-article {
   padding: 34px 0 69px;
 
+  @include mixin.breakpoint(tablet) {
+    padding: 60px 0 149px;
+  }
+
+  @include mixin.breakpoint(pc) {
+    padding: 63px 0 274px;
+  }
+
   &__wrapper {
     max-width: none;
 
@@ -47,28 +57,19 @@
     font-size: 2.8rem;
   }
   h3 {
-    margin-top: 36px;
     font-size: 2.4rem;
   }
   h4 {
-    margin-top: 28px;
     font-size: 2rem;
   }
   h5 {
-    margin-top: 34px;
     font-size: 2rem;
   }
   h6 {
-    margin-top: 27px;
     font-size: 2rem;
   }
 
-  &__text {
-    margin-top: 25px;
-  }
-
   &__cite {
-    margin-top: 26px;
     padding: 30px 20px;
     background-color: var.$citeBg-color;
 
@@ -77,12 +78,6 @@
     }
 
     figcaption {
-      margin-top: 30px;
-
-      @include mixin.breakpoint(tablet) {
-        margin-top: 60px;
-      }
-
       .cite__link {
         color: var.$citeLink-color;
         text-decoration: underline;
@@ -91,16 +86,11 @@
   }
 
   &__img {
-    margin-top: 30px;
     width: 100%;
     height: 33vw;
     max-height: 500px;
     object-fit: cover;
     object-position: bottom;
-
-    @include mixin.breakpoint(tablet) {
-      margin-top: 60px;
-    }
 
     &--center {
       margin: 30px auto 0;
@@ -116,13 +106,8 @@
   }
 
   .p-figure {
-    margin-top: 30px;
     display: flex;
     gap: 3%;
-
-    @include mixin.breakpoint(tablet) {
-      margin-top: 60px;
-    }
 
     &.-right {
       flex-direction: row-reverse;
@@ -143,12 +128,10 @@
   }
 
   &__gallery {
-    margin-top: 30px;
     display: grid;
     gap: 20px;
 
     @include mixin.breakpoint(tablet) {
-      margin-top: 60px;
       grid-template-columns: 1fr 1fr;
     }
 
@@ -163,10 +146,9 @@
   }
 
   &__list {
-    margin-top: 30px;
 
     @include mixin.breakpoint(tablet) {
-      margin: 60px 50px 0;
+      margin-left: 50px;
     }
 
     &.-ordered {
@@ -187,7 +169,6 @@
   }
 
   &__pre {
-    margin-top: 30px;
     padding: 50px min(15%, 50px);
     background-color: var.$citeBg-color;
     white-space: pre-wrap;
@@ -197,5 +178,30 @@
       font-size: 1.6rem;
       font-weight: 400;
     }
+  }
+
+  &__table {
+    border-collapse: collapse;
+    width: 100%;
+    background: var.$white-color;
+
+    td {
+      padding: 24px;
+      border: solid 1px var.$gray-color;
+    }
+  }
+
+  &__btn {
+    padding: 28px 138px;
+    border-radius: 20px;
+    font-weight: 700;
+
+    @include mixin.breakpoint(tablet) {
+      padding: 42px 190px;
+    }
+  }
+
+  &__bold {
+    font-weight: 700;
   }
 }

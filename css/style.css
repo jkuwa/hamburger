@@ -135,6 +135,7 @@ body.is-open {
 .c-btn {
   border: 1px solid #707070;
   border-radius: 10px;
+  background: linear-gradient(to left bottom, #F2EDE9, #DED8D3);
 }
 
 .c-btn--white {
@@ -175,14 +176,23 @@ body.is-open {
   }
 }
 
+.c-margin--top {
+  margin-top: 30px;
+}
+@media (min-width: 768px) {
+  .c-margin--top {
+    margin-top: 60px;
+  }
+}
+
 .p-header {
   color: #707070;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
 }
 .p-header__title {
+  font-family: "Roboto", sans-serif;
   font-size: 4rem;
+  font-weight: 700;
+  font-style: normal;
   line-height: 1.17;
 }
 @media (min-width: 1200px) {
@@ -210,7 +220,10 @@ body.is-open {
   top: 8px;
   right: 8px;
   color: inherit;
+  font-family: "Roboto", sans-serif;
   font-size: 2rem;
+  font-weight: 700;
+  font-style: normal;
   line-height: 1;
 }
 @media (min-width: 768px) {
@@ -253,9 +266,6 @@ body.is-open {
 }
 .p-searchBox__btn {
   padding: 0 28px;
-  background: linear-gradient(to left bottom, #F2EDE9, #DED8D3);
-  font-family: "M PLUS 1p", sans-serif;
-  font-size: 1.6rem;
   font-weight: 700;
   color: inherit;
   line-height: 4.4rem;
@@ -1021,6 +1031,9 @@ body.is-open {
   }
 }
 
+.p-single {
+  background-color: #FFFDFA;
+}
 .p-single__mv {
   height: 225px;
   background-image: url(../../../images/single_mv.jpg);
@@ -1050,6 +1063,16 @@ body.is-open {
 .p-article {
   padding: 34px 0 69px;
 }
+@media (min-width: 768px) {
+  .p-article {
+    padding: 60px 0 149px;
+  }
+}
+@media (min-width: 1200px) {
+  .p-article {
+    padding: 63px 0 274px;
+  }
+}
 .p-article__wrapper {
   max-width: none;
 }
@@ -1068,26 +1091,18 @@ body.is-open {
   font-size: 2.8rem;
 }
 .p-article h3 {
-  margin-top: 36px;
   font-size: 2.4rem;
 }
 .p-article h4 {
-  margin-top: 28px;
   font-size: 2rem;
 }
 .p-article h5 {
-  margin-top: 34px;
   font-size: 2rem;
 }
 .p-article h6 {
-  margin-top: 27px;
   font-size: 2rem;
 }
-.p-article__text {
-  margin-top: 25px;
-}
 .p-article__cite {
-  margin-top: 26px;
   padding: 30px 20px;
   background-color: #F5F5F5;
 }
@@ -1096,20 +1111,11 @@ body.is-open {
     padding: 50px 50px 60px;
   }
 }
-.p-article__cite figcaption {
-  margin-top: 30px;
-}
-@media (min-width: 768px) {
-  .p-article__cite figcaption {
-    margin-top: 60px;
-  }
-}
 .p-article__cite figcaption .cite__link {
   color: #4A6C9B;
   text-decoration: underline;
 }
 .p-article__img {
-  margin-top: 30px;
   width: 100%;
   height: 33vw;
   max-height: 500px;
@@ -1117,11 +1123,6 @@ body.is-open {
      object-fit: cover;
   -o-object-position: bottom;
      object-position: bottom;
-}
-@media (min-width: 768px) {
-  .p-article__img {
-    margin-top: 60px;
-  }
 }
 .p-article__img--center {
   margin: 30px auto 0;
@@ -1136,14 +1137,8 @@ body.is-open {
   }
 }
 .p-article .p-figure {
-  margin-top: 30px;
   display: flex;
   gap: 3%;
-}
-@media (min-width: 768px) {
-  .p-article .p-figure {
-    margin-top: 60px;
-  }
 }
 .p-article .p-figure.-right {
   flex-direction: row-reverse;
@@ -1159,13 +1154,11 @@ body.is-open {
   width: 54%;
 }
 .p-article__gallery {
-  margin-top: 30px;
   display: grid;
   gap: 20px;
 }
 @media (min-width: 768px) {
   .p-article__gallery {
-    margin-top: 60px;
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -1178,12 +1171,9 @@ body.is-open {
   width: 100%;
   height: auto;
 }
-.p-article__list {
-  margin-top: 30px;
-}
 @media (min-width: 768px) {
   .p-article__list {
-    margin: 60px 50px 0;
+    margin-left: 50px;
   }
 }
 .p-article__list.-ordered li {
@@ -1196,7 +1186,6 @@ body.is-open {
   margin: 17px 18px;
 }
 .p-article__pre {
-  margin-top: 30px;
   padding: 50px min(15%, 50px);
   background-color: #F5F5F5;
   white-space: pre-wrap;
@@ -1205,5 +1194,27 @@ body.is-open {
   font-family: "M PLUS 1p", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
+}
+.p-article__table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+}
+.p-article__table td {
+  padding: 24px;
+  border: solid 1px #707070;
+}
+.p-article__btn {
+  padding: 28px 138px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .p-article__btn {
+    padding: 42px 190px;
+  }
+}
+.p-article__bold {
+  font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */

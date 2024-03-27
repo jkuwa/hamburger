@@ -3,6 +3,7 @@
 .c-btn {
   border: 1px solid var.$gray-color;
   border-radius: 10px;
+  background: linear-gradient(to left bottom, var.$menuBtn-1, var.$menuBtn-2);
 }
 
 .c-btn--white {

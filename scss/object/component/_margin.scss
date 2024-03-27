@@ -1,0 +1,9 @@
+@use "../../foundation/mixin";
+
+.c-margin--top {
+  margin-top: 30px;
+
+  @include mixin.breakpoint(tablet) {
+    margin-top: 60px;
+  }
+}
