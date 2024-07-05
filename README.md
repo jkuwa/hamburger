@@ -7,9 +7,9 @@ GitHubを使ってファイルを管理することも課題の一部でした�
 81時間（１６日間）
 
 # 使用言語/ツール
-・HTML
-・CSS
-・Sass
+・HTML  
+・CSS  
+・Sass  
 ・jQuery
 
 # 感想
